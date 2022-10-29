@@ -32,6 +32,19 @@
 # <https://github.com/davidam/workingclasslicense>.
 
 #función menu para visualizar el menu de ejecución
+args(){
+	[[ $# > 0 ]] && option=$1 || CheckOpts(fallo)
+}
+CheckOpts(option){
+	case $option in
+		"-menu") menu;;
+		*) cat << EOF
+			-h - 	Muestra esta ayuda
+			-menu - Menú para acciones administrativas
+			EOF;;		
+	esac
+
+}
 
 Permiso() {
 
@@ -53,6 +66,7 @@ menu(){
 		[2] - Copia de seguridad
 		[3] - Info del sistema
 		[4] - Salir
+FDF
 
 }
 
