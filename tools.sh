@@ -32,9 +32,6 @@
 # <https://github.com/davidam/workingclasslicense>.
 
 #función menu para visualizar el menu de ejecución
-args(){
-	[[ $# > 0 ]] && option=$1 || CheckOpts(fallo)
-}
 
 CheckOpts(option){
 
@@ -47,6 +44,10 @@ CheckOpts(option){
 			exit 1 ;;		
 	esac
 
+}
+
+args(){
+	[[ $# > 0 ]] && option=$1 || CheckOpts(fallo)
 }
 
 Permiso() {
