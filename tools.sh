@@ -35,13 +35,16 @@
 args(){
 	[[ $# > 0 ]] && option=$1 || CheckOpts(fallo)
 }
+
 CheckOpts(option){
+
 	case $option in
-		"-menu") menu;;
+		"-menu") menu ;;
 		*) cat << EOF
 			-h - 	Muestra esta ayuda
 			-menu - Menú para acciones administrativas
-			EOF;;		
+			EOF
+			exit 1 ;;		
 	esac
 
 }
@@ -52,7 +55,7 @@ Permiso() {
 }
 	
 menu(){
-	cat <<FDF
+	cat << FDF
 	===================================================================
 	===================================================================
 	==	T O O L 	F O R 		A L L 			===
@@ -66,7 +69,7 @@ menu(){
 		[2] - Copia de seguridad
 		[3] - Info del sistema
 		[4] - Salir
-FDF
+	FDF
 
 }
 
@@ -84,10 +87,12 @@ BackUp(){
 leer()
 {
 	read i
-	case $i i 
+	case $i in
 		1) CrearUsuario;;
 		2) BackUp;;
 		3) InfoSys;;
 		4) exit 1;;
 	esac
-}	
+}
+args
+CheckOpts
