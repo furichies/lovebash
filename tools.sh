@@ -33,9 +33,9 @@
 
 #función menu para visualizar el menu de ejecución
 
-CheckOpts(option){
+CheckOpts(){
 
-	case $option in
+	case $1 in
 		"-menu") menu ;;
 		*) cat << EOF
 			-h - 	Muestra esta ayuda
@@ -47,7 +47,7 @@ EOF
 }
 
 args(){
-	[[ $# > 0 ]] && option=$1 || CheckOpts(fallo)
+	[[ $# > 0 ]] && echo "guay"
 }
 
 Permiso() {
@@ -73,15 +73,16 @@ menu(){
 FDF
 
 }
-
-CrearUsuario() {
-
-}
-
-infoSys(){
+CrearUsuario()
+{
 
 }
-BackUp(){
+BackUp()
+{
+
+}
+InfoSys()
+{
 
 }
 
@@ -96,4 +97,6 @@ leer()
 	esac
 }
 args
-CheckOpts
+CheckOpts $1
+leer
+
