@@ -40,7 +40,7 @@ CheckOpts(option){
 		*) cat << EOF
 			-h - 	Muestra esta ayuda
 			-menu - Menú para acciones administrativas
-			EOF
+EOF
 			exit 1 ;;		
 	esac
 
@@ -70,7 +70,7 @@ menu(){
 		[2] - Copia de seguridad
 		[3] - Info del sistema
 		[4] - Salir
-	FDF
+FDF
 
 }
 
