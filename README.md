@@ -1,5 +1,6 @@
 # lovebash
 Desarrollo formativo de scripts bash para la formación en 
+DEVOPS
 LPIC 1.
 Copyright (C) 2022  Ricardo Martínez Romero
 
